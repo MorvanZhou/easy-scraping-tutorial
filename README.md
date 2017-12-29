@@ -13,7 +13,7 @@ In these tutorials, we will learn to build some simple but useful scrapers from 
 If you understand Chinese, you are lucky! I made Chinese video + text tutorials for all of these contents. You can find it in [莫烦Python](https://morvanzhou.github.io/).
 
 
-**For this tutorial, I made two options for you.**
+**Learning from code, I made two options for you.**
 
 1. learn it from [source code](/source_code/)
 2. learn it from [jupyter note book](/notebook/)
