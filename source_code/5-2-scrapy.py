@@ -1,7 +1,7 @@
 import scrapy
 
 
-class BaikeSpider(scrapy.Spider):
+class MofanSpider(scrapy.Spider):
     name = "mofan"
     start_urls = [
         'https://morvanzhou.github.io/',
