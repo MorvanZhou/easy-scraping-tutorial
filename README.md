@@ -24,7 +24,7 @@ If you understand Chinese, you are lucky! I made Chinese video + text tutorials 
   * [Urllib](/notebook/1-1-urllib.ipynb)
 * BeautifulSoup
   * [Basic](/notebook/2-1-beautifulsoup-basic.ipynb)
-  * [Class](/notebook/2-2-beautifulsoup-class.ipynb)
+  * [CSS](/notebook/2-2-beautifulsoup-css.ipynb)
   * [RegEx](/notebook/2-3-beautifulsoup-regex.ipynb)
   * [Practice random scraping](/notebook/2-4-practice-baidu-baike.ipynb)
 * Requests and Download
