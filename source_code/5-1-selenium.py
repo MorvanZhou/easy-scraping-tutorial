@@ -18,6 +18,7 @@ driver.find_element_by_link_text(u"教程 ▾").click()
 driver.find_element_by_link_text(u"数据处理 ▾").click()
 driver.find_element_by_link_text(u"网页爬虫").click()
 
+print(driver.page_source[:200])
 driver.get_screenshot_as_file("./img/sreenshot2.png")
 driver.close()
 print('finish')
