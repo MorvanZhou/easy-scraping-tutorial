@@ -39,13 +39,12 @@ def post_login():
 def session_login():
     print('\nsession login')
     # http://pythonscraping.com/pages/cookies/login.html
-    sess = requests.Session()
+    session = requests.Session()
     payload = {'username': 'Morvan', 'password': 'password'}
-
-    s = sess.post('http://pythonscraping.com/pages/cookies/welcome.php', data=payload)
-    print(s.cookies.get_dict())
-    s = sess.get("http://pythonscraping.com/pages/cookies/profile.php")
-    print(s.text)
+    r = session.post('http://pythonscraping.com/pages/cookies/welcome.php', data=payload)
+    print(r.cookies.get_dict())
+    r = session.get("http://pythonscraping.com/pages/cookies/profile.php")
+    print(r.text)
 
 
 get()
