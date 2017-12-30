@@ -9,8 +9,8 @@ html = requests.get(URL).text
 soup = BeautifulSoup(html, 'lxml')
 img_ul = soup.find_all('ul', {"class": "img_list"})
 
-for li in img_ul:
-    imgs = li.find_all('img')
+for ul in img_ul:
+    imgs = ul.find_all('img')
     for img in imgs:
         url = img['src']
         r = requests.get(url, stream=True)
