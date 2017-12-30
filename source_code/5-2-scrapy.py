@@ -16,7 +16,6 @@ class MofanSpider(scrapy.Spider):
         }
 
         urls = response.css('a::attr(href)').re(r'^/.+?/$')     # find all sub urls
-        urls = [response.urljoin(url) for url in urls]     # formatting urls
         for url in urls:
             yield response.follow(url, callback=self.parse)     # it will filter duplication automatically
 
