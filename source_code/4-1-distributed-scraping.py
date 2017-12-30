@@ -15,7 +15,7 @@ def parse(html):
     soup = BeautifulSoup(html, 'lxml')
     urls = soup.find_all('a', {"href": re.compile('^/.+?/$')})
     title = soup.find('h1').get_text().strip()
-    page_urls = set([urljoin(base_url, url['href']) for url in urls])
+    page_urls = set([urljoin(base_url, url['href']) for url in urls])   # remove duplication
     url = soup.find('meta', {'property': "og:url"})['content']
     return title, page_urls, url
 
@@ -42,9 +42,7 @@ if __name__ == '__main__':
         seen.update(unseen)
         unseen.clear()
 
-        for res in results:
-            if res is not None:
-                title, page_urls, url = res
+        for title, page_urls, url in results:
                 print(count, title, url)
                 count += 1
                 unseen.update(page_urls - seen)
