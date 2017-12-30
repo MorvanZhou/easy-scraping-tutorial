@@ -32,7 +32,7 @@ If you understand Chinese, you are lucky! I made Chinese video + text tutorials 
   * [Download](/notebook/3-2-download.ipynb)
   * [Practice download image](/notebook/3-3-practice-download-images.ipynb)
 * Speed up scraping
-  * [Distributed scraping (multiprocessing)](/notebook/4-1-destributed-scraping.ipynb)
+  * [Distributed scraping (multiprocessing)](/notebook/4-1-distributed-scraping.ipynb)
   * [Asyncio](/notebook/4-2-asyncio.ipynb)
 * Advanced
   * [Selenium](/notebook/5-1-selenium.ipynb)
