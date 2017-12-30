@@ -30,7 +30,7 @@ def post_login():
     # http://pythonscraping.com/pages/cookies/login.html
     payload = {'username': 'Morvan', 'password': 'password'}
     r = requests.post('http://pythonscraping.com/pages/cookies/welcome.php', data=payload)
-    print(r.cookies)
+    print(r.cookies.get_dict())
     # http://pythonscraping.com/pages/cookies/profile.php
     r = requests.get('http://pythonscraping.com/pages/cookies/profile.php', cookies=r.cookies)
     print(r.text)
