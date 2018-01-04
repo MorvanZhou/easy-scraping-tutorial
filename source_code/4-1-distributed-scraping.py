@@ -23,12 +23,22 @@ def parse(html):
 if __name__ == '__main__':
     base_url = 'https://morvanzhou.github.io/'
     # base_url = "http://127.0.0.1:4000/"
+
+    # DON'T OVER CRAWL THE WEBSITE OR YOU MAY NEVER VISIT AGAIN
+    if base_url != "http://127.0.0.1:4000/":
+        restricted_crawl = True
+    else:
+        restricted_crawl = False
+
     unseen = set([base_url,])
     seen = set()
 
     pool = mp.Pool(4)                       # number strongly affected
     count, t1 = 1, time.time()
-    while len(unseen) != 0:                 # still get some url to visit
+
+    while len(unseen) != 0:              # still get some url to visit
+        if restricted_crawl and len(seen) > 20:
+            break
         print('\nDistributed Crawling...')
         crawl_jobs = [pool.apply_async(crawl, args=(url,)) for url in unseen]
         htmls = [j.get() for j in crawl_jobs]                                       # request connection

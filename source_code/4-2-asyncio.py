@@ -6,8 +6,15 @@ from urllib.request import urljoin
 import re
 import multiprocessing as mp
 
-# base_url = "https://morvanzhou.github.io/"
-base_url = "http://127.0.0.1:4000/"
+base_url = "https://morvanzhou.github.io/"
+# base_url = "http://127.0.0.1:4000/"
+
+# DON'T OVER CRAWL THE WEBSITE OR YOU MAY NEVER VISIT AGAIN
+if base_url != "http://127.0.0.1:4000/":
+    restricted_crawl = True
+else:
+    restricted_crawl = False
+
 seen = set()
 unseen = set([base_url])
 
@@ -33,6 +40,8 @@ async def main(loop):
     async with aiohttp.ClientSession() as session:
         count = 1
         while len(unseen) != 0:
+            if restricted_crawl and len(seen) > 20:
+                break
             tasks = [loop.create_task(crawl(url, session)) for url in unseen]
             finished, unfinished = await asyncio.wait(tasks)
             htmls = [f.result() for f in finished]
