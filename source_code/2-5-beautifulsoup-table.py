@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
 # if has Chinese, apply decode()
-html = urlopen("https://morvanzhou.github.io/static/scraping/table.html").read().decode('utf-8')
+html = urlopen("https://mofanpy.com/static/scraping/table.html").read().decode('utf-8')
 
 soup = BeautifulSoup(html, features='lxml')
 
@@ -17,6 +17,6 @@ for item in soup.find("table", {"id": "course-list"}).tr.next_siblings:
 
 print("-------------------------")
 # navigate using next_sibling/previous_sibling
-print(soup.find("img", {"src": "https://morvanzhou.github.io/static/img/course_cover/scraping.jpg"}
+print(soup.find("img", {"src": "https://mofanpy.com/static/img/course_cover/scraping.jpg"}
                 ).parent.previous_sibling.get_text())
 

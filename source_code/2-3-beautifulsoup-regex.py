@@ -3,7 +3,7 @@ from urllib.request import urlopen
 import re
 
 # if has Chinese, apply decode()
-html = urlopen("https://morvanzhou.github.io/static/scraping/table.html").read().decode('utf-8')
+html = urlopen("https://mofanpy.com/static/scraping/table.html").read().decode('utf-8')
 
 soup = BeautifulSoup(html, features='lxml')
 

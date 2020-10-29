@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://morvanzhou.github.io/" target="_blank">
+    <a href="https://mofanpy.com/" target="_blank">
     <img width="40%" src="/scraping.jpg" style="max-width:100%;">
     </a>
 </p>
@@ -10,7 +10,7 @@
 # Web scraping tutorials (Python)
 
 In these tutorials, we will learn to build some simple but useful scrapers from scratch. Get to know how we can read web page and select sections you need or even download files.
-If you understand Chinese, you are lucky! I made Chinese video + text tutorials for all of these contents. You can find it in [莫烦Python](https://morvanzhou.github.io/).
+If you understand Chinese, you are lucky! I made Chinese video + text tutorials for all of these contents. You can find it in [莫烦Python](https://mofanpy.com/).
 
 
 **Learning from code, I made two options for you.**
@@ -53,7 +53,7 @@ If you understand Chinese, you are lucky! I made Chinese video + text tutorials 
 
 <div>
   <a href="https://www.patreon.com/morvan">
-    <img src="https://morvanzhou.github.io/static/img/support/patreon.jpg"
+    <img src="https://mofanpy.com/static/img/support/patreon.jpg"
          alt="Patreon"
          height=120></a>
 </div>

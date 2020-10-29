@@ -4,7 +4,7 @@ import scrapy
 class MofanSpider(scrapy.Spider):
     name = "mofan"
     start_urls = [
-        'https://morvanzhou.github.io/',
+        'https://mofanpy.com/',
     ]
     # unseen = set()
     # seen = set()      # we don't need these two as scrapy will deal with them automatically

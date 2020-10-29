@@ -6,7 +6,7 @@ from urllib.request import urljoin
 import re
 import multiprocessing as mp
 
-base_url = "https://morvanzhou.github.io/"
+base_url = "https://mofanpy.com/"
 # base_url = "http://127.0.0.1:4000/"
 
 # DON'T OVER CRAWL THE WEBSITE OR YOU MAY NEVER VISIT AGAIN
