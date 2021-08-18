@@ -1,0 +1,29 @@
+import requests
+from bs4 import BeautifulSoup
+session=requests.Session()
+url="https://github.com/login"
+username='Macuyiko'
+#visit the login page
+r=session.get(url.format('login'))
+html_soup=BeautifulSoup(r.text,'html.parser')
+
+
+
+form=html_soup.find_all('form')
+form
+
+
+#<input="hidden"> will give values for all the hidden values in the login page
+hidden_tags = html_soup.find_all("input",type="hidden")
+hidden_tags
+
+
+data={}
+for form in html_soup.find_all('form'):
+ #get out the hidden form fields
+ for inp in form.select('input[type=hidden]'):
+ data[inp.get('name')]=inp.get('value')
+ print(dat)
+ 
+ 
+ 
