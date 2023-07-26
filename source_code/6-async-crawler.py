@@ -1,12 +1,12 @@
 # This script opens MAX_CONCURRENCY (3) paralell browsers, accesses a
-# different URL on each one, gets all linsk from each page e prints the lenght
+# different URL on each one, gets all links from each page e prints the number of links
 #
-## ATENTION: Before run the script, start the drivr as a server ###
+## ATENTION: Before run the script, start the driver as a server ###
 ## more details in https://github.com/douglasdcm/caqui
 #
 # $ ./chromedriver --port=9999
 #
-## Open another terminal
+## Open another terminal to run the script
 #
 # $ python 6-async-crawler.py
 #
